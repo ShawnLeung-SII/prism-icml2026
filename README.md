@@ -14,3 +14,5 @@ Edit `index.html` to update content, styles and interactions. Figures are in `im
 
 The presentation was developed using the [paper2html workflow](https://github.com/QuZhan51496/paper2anything/tree/main/paper2html), with custom interactive galleries. All research figures and reported results come from the authors’ supplied paper.
 The official ICML logo is sourced from the [ICML press resources](https://icml.cc/Conferences/2026/Press) ([original SVG](https://icml.cc/media/Press/ICML-logo.svg)).
+
+The project cover (`images/PRISM-cover.png`) is an AI-assisted conceptual illustration of noise disentanglement, separate from the original paper figures. It also supplies the social sharing preview.
