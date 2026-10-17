@@ -6,7 +6,7 @@ Website: https://shawnleung-sii.github.io/prism-icml2026/
 
 This repository contains the static project website, paper PDF and publication figures. Research code is coming soon.
 
-The page includes the method, quantitative results, five appendix scene galleries (Figures 10–14), real/simulation environments (Figure 9), and all six real-world task rollouts (Figures 15–20).
+The page presents physics-grounded depth simulation for embodied manipulation, with in-domain and cross-camera evaluation, component/backbone/supervision ablations, five appendix scene galleries (Figures 10–14), real/simulation environments (Figure 9), and six task rollouts (Figures 15–20). Figures use consistent captions and display inline without a lightbox. The authors report ongoing work on cross-sensor generalization and temporal noise consistency; research code will be released in the future.
 
 ## Editing and hosting
 
