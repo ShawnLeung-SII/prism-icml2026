@@ -34,6 +34,6 @@ document.querySelectorAll('[data-task]').forEach(button=>button.addEventListener
  const index=Number(button.dataset.task);const data=taskData[index-1];setPressed('[data-task]',button);
  document.getElementById('task-title').textContent=`T${index} · ${data[0]}`;document.getElementById('task-number').textContent=`Figure ${14+index}`;
  ['platform','properties','goal','challenge'].forEach((key,i)=>document.getElementById(`task-${key}`).textContent=data[i+1]);
- document.getElementById('task-caption-title').textContent=`Figure ${14+index} · ${data[0]}`;document.getElementById('task-caption').textContent=data[3]+' The sequence shows a policy trained on PRISM-enhanced simulation data.';const image=document.getElementById('task-image');image.src=`images/Task${index}-Rollout.webp`;image.alt=`Figure ${14+index}: complete ${data[0]} real-world manipulation rollout`;
+ document.getElementById('task-caption-title').textContent=`Figure ${14+index} · ${data[0]}`;document.getElementById('task-caption').textContent=index===2?'Representative banana grasping and transfer frames reproduced from the paper.':data[3]+' The sequence shows a policy trained on PRISM-enhanced simulation data.';const image=document.getElementById('task-image');image.src=`images/Task${index}-Rollout.webp`;image.alt=`Figure ${14+index}: complete ${data[0]} real-world manipulation rollout`;
 }));
 </script></body></html>
