@@ -18,3 +18,15 @@ The presentation was developed using the [paper2html workflow](https://github.co
 The official ICML logo is sourced from the [ICML press resources](https://icml.cc/Conferences/2026/Press) ([original SVG](https://icml.cc/media/Press/ICML-logo.svg)).
 
 The project cover (`images/PRISM-cover.png`) is an AI-assisted conceptual illustration of noise disentanglement, separate from the original paper figures. It also supplies the social sharing preview.
+
+
+## October 18 update
+
+Compact conference / cover / institution header. The author-supplied Sim2Real pipeline replaces the prior figure. Main-content images load lazily; the cover is a 56 KB WebP. Text is left aligned, with wider method descriptions; all result tables remain original PDF crops.
+
+Institution logo sources (official websites):
+- Fudan: https://www.fudan.edu.cn/_upload/tpl/00/06/6/template6/images/logo.png
+- Shanghai Innovation Institute: https://www.sii.edu.cn/_upload/tpl/00/09/9/template9/images/logo.svg
+- Zhejiang University: https://www.zju.edu.cn/_upload/article/images/c3/98/1fb1d281492eb477a098ef7a2901/6d8d432f-56ac-47eb-b22d-a23b103aed01.png
+- Shanghai Jiao Tong University: https://vi.sjtu.edu.cn/img/base/Logo.png
+- Ant Group: https://www.antgroup.com/en/news-media/media-library
