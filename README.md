@@ -45,3 +45,8 @@ Horizontal logo sources:
 ## Continuous captions and corrected Zhejiang mark
 
 The Zhejiang header resource also contained a site-search label. `logo-zju-clean.svg` restricts its viewport to the official emblem and bilingual university name; no search text is displayed. Captions now flow directly after their highlighted titles. Balanced line wrapping and concise descriptions avoid isolated one- or two-word lines in static and interactive captions.
+
+
+## Equal-width captions
+
+Figure wrappers now set one shared width for images and captions, including the smaller original tables. Captions and section introductions use natural full-width wrapping rather than balanced lines. The first author's homepage link is removed, and limitations / future work are presented in one paragraph.
