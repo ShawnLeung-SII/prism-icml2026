@@ -40,3 +40,8 @@ Horizontal logo sources:
 - Zhejiang University official site: https://www.zju.edu.cn/_upload/site/1/logo.png (official white artwork displayed in university blue through CSS).
 - Shanghai Jiao Tong University official VI download: https://vi.sjtu.edu.cn/index.php/downloads/attachments/137
 - arXiv official white wordmark: https://info.arxiv.org/assets/arxiv-logo-one-color-white.svg
+
+
+## Continuous captions and corrected Zhejiang mark
+
+The Zhejiang header resource also contained a site-search label. `logo-zju-clean.svg` restricts its viewport to the official emblem and bilingual university name; no search text is displayed. Captions now flow directly after their highlighted titles. Balanced line wrapping and concise descriptions avoid isolated one- or two-word lines in static and interactive captions.
