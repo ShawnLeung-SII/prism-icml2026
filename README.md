@@ -12,6 +12,8 @@ The page presents physics-grounded depth simulation for embodied manipulation, w
 
 Edit `index.html` to update content, styles and interactions. Figures are in `images/`. No build step or external runtime dependency is required. GitHub Pages serves this directory directly; `.nojekyll` keeps the site static.
 
+Tables 1–4 and 15–17 are displayed as high-resolution crops from the supplied paper PDF, preserving every original method, metric and annotation. The five scene galleries retain all eight columns of the original figures. The compact cover appears beside the ICML logo without an additional caption.
+
 The presentation was developed using the [paper2html workflow](https://github.com/QuZhan51496/paper2anything/tree/main/paper2html), with custom interactive galleries. All research figures and reported results come from the authors’ supplied paper.
 The official ICML logo is sourced from the [ICML press resources](https://icml.cc/Conferences/2026/Press) ([original SVG](https://icml.cc/media/Press/ICML-logo.svg)).
 
