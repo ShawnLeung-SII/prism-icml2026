@@ -30,3 +30,13 @@ Institution logo sources (official websites):
 - Zhejiang University: https://www.zju.edu.cn/_upload/article/images/c3/98/1fb1d281492eb477a098ef7a2901/6d8d432f-56ac-47eb-b22d-a23b103aed01.png
 - Shanghai Jiao Tong University: https://vi.sjtu.edu.cn/img/base/Logo.png
 - Ant Group: https://www.antgroup.com/en/news-media/media-library
+
+
+## Title, horizontal institution marks and arXiv entry
+
+The page displays the exact paper title as its single main heading. `series` is omitted from both the visible and downloadable BibTeX. The arXiv entry is marked “coming soon” and temporarily links to https://arxiv.org/; replace that URL in the resource link once the paper has an identifier.
+
+Horizontal logo sources:
+- Zhejiang University official site: https://www.zju.edu.cn/_upload/site/1/logo.png (official white artwork displayed in university blue through CSS).
+- Shanghai Jiao Tong University official VI download: https://vi.sjtu.edu.cn/index.php/downloads/attachments/137
+- arXiv official white wordmark: https://info.arxiv.org/assets/arxiv-logo-one-color-white.svg
