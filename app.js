@@ -1,0 +1,27 @@
+
+document.getElementById('copy').addEventListener('click',async()=>{const code=document.getElementById('citation');const status=document.getElementById('status');try{await navigator.clipboard.writeText(code.textContent);status.textContent='Citation copied.';}catch{const range=document.createRange();range.selectNodeContents(code);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);status.textContent='Citation selected. Press Ctrl+C / ⌘C to copy.';}});
+const sceneData=[["Kitchen", "Kitchen", 10], ["Living", "Living Room", 11], ["Market", "Market", 12], ["Office", "Office", 13], ["Lounge", "Lounge", 14]];
+const taskData=[["Can-to-Plate", "Franka Research 3", "Specular", "Pick up the metallic can and place it upright on the plate.", "Reflective surfaces create missing depth, requiring robust inference from fragmented boundaries."], ["Banana-to-Plate", "Franka Research 3", "Deformable", "Grasp the banana and place it securely on the plate.", "Irregular geometry and measurement noise challenge precise grasping and placement."], ["Stack Cubes", "Franka Research 3", "Specular \u00b7 Multi-stage", "Stack the red cube on the blue cube, then place the green cube on top.", "Noisy top surfaces and accumulated alignment errors make a stable three-cube tower challenging."], ["Bucket-to-Plate", "Realman RM75", "Translucent \u00b7 Articulated", "Lift the translucent bucket by its articulated handle and place it on the plate.", "Surface-related invalidation and inaccurate depth combine with a moving handle and a swinging bucket."], ["Toyball-to-Drawer", "Realman RM75", "Articulated \u00b7 Long-horizon", "Open the drawer, place the ball inside, and close the drawer.", "Reflective handles and arm-induced occlusion challenge geometric reasoning across multiple stages."], ["Bread-to-Microwave", "Realman RM75", "Transparent \u00b7 Articulated", "Open the microwave door, place the bread inside, and close the door.", "The semi-transparent window creates depth artifacts during interaction with the articulated door."]];
+function setPressed(group,current){document.querySelectorAll(group).forEach(button=>button.setAttribute('aria-pressed',String(button===current)));}
+document.querySelectorAll('[data-scene]').forEach(button=>button.addEventListener('click',()=>{
+ const data=sceneData.find(item=>item[0]===button.dataset.scene);setPressed('[data-scene]',button);
+ document.getElementById('scene-title').textContent=data[1];document.getElementById('scene-number').textContent=`Figure ${data[2]}`;
+ const image=document.getElementById('scene-image');image.src=`images/${data[0]}.webp`;image.alt=`${data[1]} scene: RGB, simulation depth, predicted and ground-truth invalidation, inaccuracy, and final depth`;
+ document.getElementById('scene-caption-title').textContent=`Figure ${data[2]} · ${data[1]} depth synthesis`;document.getElementById('scene-caption').textContent='RGB and ideal depth are compared with predicted and reference invalidation, measurement inaccuracy, and final depth. The rows show different views within this scene.';
+}));
+document.querySelectorAll('[data-task]').forEach(button=>button.addEventListener('click',()=>{
+ const index=Number(button.dataset.task);const data=taskData[index-1];setPressed('[data-task]',button);
+ document.getElementById('task-title').textContent=`T${index} · ${data[0]}`;document.getElementById('task-number').textContent=`Figure ${14+index}`;
+ ['platform','properties','goal','challenge'].forEach((key,i)=>document.getElementById(`task-${key}`).textContent=data[i+1]);
+ document.getElementById('task-caption-title').textContent=`Figure ${14+index} · ${data[0]}`;document.getElementById('task-caption').textContent=index===2?'Banana grasping and transfer during real-world manipulation.':data[3]+' The sequence shows a policy trained on PRISM-enhanced simulation data.';const image=document.getElementById('task-image');image.src=`images/Task${index}-Rollout.webp`;image.alt=`Figure ${14+index}: complete ${data[0]} real-world manipulation rollout`;
+}));
+
+
+// Research figure enlargement reads the current gallery image, including switched scenes/tasks.
+const figureDialog=document.getElementById('figure-dialog');
+document.querySelectorAll('.figure-zoom').forEach(button=>button.addEventListener('click',()=>{const image=button.querySelector('img'),expanded=document.getElementById('expanded-figure');expanded.src=image.src;expanded.alt=image.alt;figureDialog.showModal()}));
+document.getElementById('close-figure').addEventListener('click',()=>figureDialog.close());figureDialog.addEventListener('click',event=>{if(event.target===figureDialog)figureDialog.close()});
+const chapterLinks=[...document.querySelectorAll('.quicknav a')];
+const chapterObserver=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting)chapterLinks.forEach(link=>{const current=link.hash===`#${entry.target.id}`;link.classList.toggle('active',current);if(current)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')})}},{rootMargin:'-18% 0px -55% 0px',threshold:0});
+chapterLinks.forEach(link=>{const section=document.querySelector(link.hash);if(section)chapterObserver.observe(section)});
+document.querySelectorAll('.gallery-panel img').forEach(image=>image.addEventListener('load',()=>{if(image.naturalWidth){image.width=image.naturalWidth;image.height=image.naturalHeight}}));

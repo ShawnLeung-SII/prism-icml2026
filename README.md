@@ -6,11 +6,11 @@ Website: https://shawnleung-sii.github.io/prism-icml2026/
 
 This repository contains the static project website, paper PDF and publication figures. Research code is coming soon.
 
-The page presents physics-grounded depth simulation for embodied manipulation, with in-domain and cross-camera evaluation, component/backbone/supervision ablations, five appendix scene galleries (Figures 10–14), real/simulation environments (Figure 9), and six task rollouts (Figures 15–20). Figures use consistent captions and display inline without a lightbox. The authors report ongoing work on cross-sensor generalization and temporal noise consistency; research code will be released in the future.
+The page presents physics-grounded depth simulation for embodied manipulation, with in-domain and cross-camera evaluation, component/backbone/supervision ablations, five appendix scene galleries (Figures 10–14), real/simulation environments (Figure 9), and six task rollouts (Figures 15–20). Figures use consistent captions and can be enlarged in an accessible dialog. The authors report ongoing work on cross-sensor generalization and temporal noise consistency; research code will be released in the future.
 
 ## Editing and hosting
 
-Edit `index.html` to update content, styles and interactions. Figures are in `images/`. No build step or external runtime dependency is required. GitHub Pages serves this directory directly; `.nojekyll` keeps the site static.
+Edit `index.html` for content, `style.css` for presentation, and `app.js` for the scene/task galleries and interactions. Figures are in `images/`. No build step or external runtime dependency is required. GitHub Pages serves this directory directly; `.nojekyll` keeps the site static.
 
 Tables 1–4 and 15–17 are displayed as high-resolution crops from the supplied paper PDF, preserving every original method, metric and annotation. The five scene galleries retain all eight columns of the original figures. The compact cover appears beside the ICML logo without an additional caption.
 
@@ -50,3 +50,8 @@ The Zhejiang header resource also contained a site-search label. `logo-zju-clean
 ## Equal-width captions
 
 Figure wrappers now set one shared width for images and captions, including the smaller original tables. Captions and section introductions use natural full-width wrapping rather than balanced lines. The first author's homepage link is removed, and limitations / future work are presented in one paragraph.
+
+
+## Research-page visual refresh
+
+The project now matches the DepState-JEPA research-release visual system: a gradient project title, institution marks at the top, author information below the title, prominent chapter labels, and sticky section navigation. ICML branding, the exact paper subtitle, all original sections, figure/table sources, scene and task galleries, and citation data are preserved. Research figures can be enlarged by clicking; mobile typography retains the original PRISM reading sizes.
