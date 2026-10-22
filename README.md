@@ -34,7 +34,7 @@ Institution logo sources (official websites):
 
 ## Title, horizontal institution marks and arXiv entry
 
-The page displays the exact paper title as its single main heading. `series` is omitted from both the visible and downloadable BibTeX. The arXiv entry is marked “coming soon” and temporarily links to https://arxiv.org/; replace that URL in the resource link once the paper has an identifier.
+The page displays the exact paper title as its single main heading. `series` is omitted from both the visible and downloadable BibTeX. The arXiv entry links to https://arxiv.org/abs/2610.29432; paper buttons open the arXiv PDF. The official ICML entry and PMLR conference citation are retained.
 
 Horizontal logo sources:
 - Zhejiang University official site: https://www.zju.edu.cn/_upload/site/1/logo.png (official white artwork displayed in university blue through CSS).
@@ -55,3 +55,7 @@ Figure wrappers now set one shared width for images and captions, including the 
 ## Research-page visual refresh
 
 The project now matches the DepState-JEPA research-release visual system: a gradient project title, institution marks at the top, author information below the title, prominent chapter labels, and sticky section navigation. ICML branding, the exact paper subtitle, all original sections, figure/table sources, scene and task galleries, and citation data are preserved. Research figures can be enlarged by clicking; mobile typography retains the original PRISM reading sizes.
+
+## arXiv release
+
+Paper: https://arxiv.org/abs/2610.29432. PDF: https://arxiv.org/pdf/2610.29432. Visible and downloadable citations include the arXiv identifier. Code remains coming soon.
